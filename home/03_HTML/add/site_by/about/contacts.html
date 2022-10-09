@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contacts</title>
+    <style type="text/css">
+      body {
+           background-color: white;
+           margin-left: 10%;
+           margin-right: 10%;
+           }
+    </style>
+</head>
+<body>
+    <h1>Горизонтальное меню</h1>
+    <p><a href="../main.html">Главная</a> | <a href="../catalog.html">Каталог</a> | <a href="../promo.html">Акции</a> | <a href="../about.html">О нас</a></p>
+    <h1>Меню список</h1>
+    <UL type="circle">
+        <LI><a href="../main.html">Главная</a></LI>
+        <LI><a href="../catalog.html">Каталог</a></LI>
+        <LI><a href="../promo.html">Акции</a></LI>
+        <LI><a href="../about.html">О нас</a></LI>
+    </UL>
+    <h1>Меню с вложенным списком</h1>
+    <UL type="circle">
+        <LI><a href="../main.html">Главная</a></LI>
+        <UL type="circle">
+            <LI><a href="../main/news.html">Новости</a></LI>
+        </UL>
+        <LI><a href="../catalog.html">Каталог</a></LI>
+        <UL type="circle">
+            <LI><a href="../catalog/autumn-winter.html">Осень-Зима</a></LI>
+            <LI><a href="../catalog/spring-summer.html">Весна-Лето</a></LI>    
+        </UL>
+        <LI><a href="../promo.html">Акции</a></LI>
+        <UL type="circle">
+            <LI><a href="../promo/current.html">Актуальные</a></LI>
+            <LI><a href="../promo/past.html">Прошедшие</a></LI>    
+        </UL>
+        <LI><a href="../about.html">О нас</a></LI>
+        <UL type="circle">
+            <LI><a href="contacts.html">Контакты</a></LI>
+            <LI><a href="scheme.html">Проезд</a></LI>    
+        </UL>
+    </UL>
+    <h1>Меню таблица с вложенными таблицами</h1>
+    <table>
+        <tr>
+            <td>
+                <a href="../main.html">Главная</a>
+                <table>
+                    <tr>
+                        <td>
+                            <a href="../main/news.html">Новости</a>
+                        </td>
+                    </tr>  
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a href="../catalog.html">Каталог</a>
+                <table>
+                    <tr>
+                        <td>
+                            <a href="../catalog/autumn-winter.html">Осень-Зима</a>
+                            <tr>
+                            <td>
+                            <a href="../catalog/spring-summer.html">Весна-Лето</a> 
+                            </td>
+                            </tr>
+                        </td>
+                    </tr>  
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a href="../promo.html">Акции</a>
+                <table>
+                    <tr>
+                        <td>
+                            <a href="../promo/current.html">Актуальные</a>
+                            <tr>
+                            <td>
+                            <a href="../promo/past.html">Прошедшие</a> 
+                            </td>
+                            </tr>
+                        </td>
+                    </tr>  
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a href="../about.html">О нас</a>
+                <table>
+                    <tr>
+                        <td>
+                            <a href="contacts.html">Контакты</a>
+                            <tr>
+                            <td>
+                            <a href="scheme.html">Проезд</a> 
+                            </td>
+                            </tr>
+                        </td>
+                    </tr>  
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
