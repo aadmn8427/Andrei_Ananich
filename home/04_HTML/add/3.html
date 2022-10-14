@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3</title>
+</head>
+<body>
+    <h1>HOW-TO: Программа на Python, Часть 3 </h1>
+    <UL type="circle">
+        <LI><a href="1.html"><em>Программа на Python — часть 1</em></a></LI>
+        <LI><a href="2.html"><em>Программа на Python — часть 2</em></a></LI>
+        <LI><a href="3.html"><em>Программа на Python — часть 3</em></a></LI>
+    </UL>
+    <IMG align="right" src=“Icon-Python.png” alt="Icon-Python" title="Icon-Python">
+    <h2><a id="C">Содержание</a></h2>
+    <h3>HOW-TO: Программа на Python, Часть 3</h3>
+    <UL type="circle">
+        <LI><a href="#M">Модули</a></LI>
+        <LI><a href="#F">Функции</a></LI>
+    </UL>
+    <hr>
+        <p>В прошлый раз мы изучали списки, подстановку переменных, комментарии, сравнение и
+            присвоение, операторы <b>if</b> и <b>while</b>. Я обещал, что в этой части мы изучим модули и
+            функции. Давайте начнём.</p>
+    <h4><FONT size="5"><a id="M">Модули</a></FONT></h4>
+        <a href="#C">К содержанию</a>
+        <p><FONT size="3">Модули предлагают способ расширить программирование на Python. Вы можете создать
+            свои модули, использовать те, которые поставляются с Python или которые написали
+            другие. В самом Python есть сотни модулей, которые облегчают написание программ.
+            Список модулей, поставляемых с Python, находится по адресу:
+            <u><i>http://docs.python.org/modindex.html</i></u>. Некоторые модули предназначены для определённых
+            операционных систем, но большинство из них кроссплатформенные и работают
+            одинаково на <a href="https://ru.wikipedia.org/wiki/Linux" target=“_blank”>Linux</a>, <a href="https://ru.wikipedia.org/wiki/Macintosh" target=“_blank”>Mac</a> и <a href="https://ru.wikipedia.org/wiki/Windows" target=“_blank”>Microsoft Windows</a>. Для использования внешнего модуля
+            необходимо импортировать его в программу. Один из модулей, поставляемых с Python,
+            называется «random». Он даёт возможность генерировать псевдослучайные числа. Мы
+            используем этот модуль в нашем первом примере.</FONT></p>
+        <code><span style="font-family: Courier New;"><FONT size="2">#=======================================
+        <BR># random_example.py
+        <BR># Module example using the random module
+        <BR> #=======================================
+        <BR>import random
+        <BR># print 14 random integers
+        <BR>for cntr in range(1,15):
+        <BR> &nbsp;&nbsp; print random.randint(1,10)</FONT></span></code>
+        <p><FONT size="3">Давайте разберём код по строкам. Первые четыре строки — это комментарии, о которых
+            мы говорили в прошлый раз. Пятая строка говорит Python, что нужно использовать
+            модуль «random». Мы должны явно указать Python на это.</FONT></p>
+    <hr>
+        <p><a id="P"></a></p>
+    <h5><FONT size="5"><a id="F">Функции</a></FONT></h5>
+        <a href="#C">К содержанию</a>
+        <p><FONT size="3">Когда мы импортировали модуль random, мы использовали функцию <b>randint()</b>. Функция
+            — это блок кода, который создан для того, чтобы вызывать его в программе, обычно,
+            более одного раза. Это упрощает работу над программой и предотвращает набор одного и
+            того же кода снова и снова. Грубо говоря, если вам нужно написать некоторый код
+            больше, чем 1-2 раза, стоит сделать его функцией. Хотя следующие два примера очень
+            простые, это хорошие примеры функций. Теперь мы хотим, скажем, взять два числа,
+            сложить их, перемножить, вычесть одно из другого, затем вывести на экран эти числа и
+            результаты одновременно. Допустим, нам нужно сделать это три раза для трёх наборов
+            чисел. Тогда наш пример будет выглядеть как код ниже.</FONT></p>
+        <code><span style="font-family: Courier New;"><FONT size="2">#silly example
+            <BR>print '%d + %d = %d ' % (1,2,1+2)
+            <BR>print '%d * %d = %d ' % (1,2,1*2)
+            <BR>print '%d - %d = %d ' % (1,2,1-2)
+            <BR>print '\n'
+            <BR>print '%d + %d = %d ' % (1,4,1+4)
+            <BR>print '%d * %d = %d ' % (1,4,1*4)
+            <BR>print '%d - %d = %d ' % (1,4,1-4)
+            <BR>print '\n'
+            <BR>print '%d + %d = %d ' % (10,5,10+5)
+            <BR>print '%d * %d = %d ' % (10,5,10*5)
+            <BR>print '%d - %d = %d ' % (10,5,10-5)
+            <BR>print '\n'</FONT></span></code>
+    
+        <p><FONT size="3">Здесь нужно не только набрать много текста, но и непременно возникнут ошибки как при
+            написании, так и при внесении изменений. Вместо этого мы создадим функцию, которую
+            назовём <b><i>«DoTwo»</i></b>. Она будет каждый раз брать два числа, проводить математические
+            операции и выводить результат. Начнём с ключевого слова <b><i>«def»</i></b>, которое сигнализирует
+            о том, что мы собираемся определить функцию. После слова <b><i>«def»</i></b> добавим название
+            функции и список параметров, если таковые имеются, в круглых скобках. Эту строку
+            необходимо завершить двоеточием. Код функции набирается с отступом. Наш
+            улучшенный простой пример <u>(№2)</u> показан ниже.</FONT></p>
+
+        <code><span style="font-family: Courier New;"><FONT size="2">#silly example 2...still silly, but better
+        <BR>def DoTwo(num1,num2):
+        <BR> &nbsp; &nbsp; &nbsp; print '%d + %d = %d ' % (num1,num2,num1+num2)       
+        <BR> &nbsp; &nbsp; &nbsp; print '%d * %d = %d ' % (num1,num2,num1*num2)
+        <BR> &nbsp; &nbsp; &nbsp; print '%d - %d = %d ' % (num1,num2,num1-num2)
+        <BR> &nbsp; &nbsp; &nbsp; print '\n'
+        <BR>DoTwo(1,2)
+        <BR>DoTwo(1,4)
+        <BR>DoTwo(10,5)</FONT></span> </code>
+        <p><FONT size="3">Как видите, здесь написано меньше кода — 8 строк вместо 12. Если нам нужно будет чтолибо поменять в функции, мы сможем сделать это, не создавая проблем для нашей
+            программы. Чтобы вызвать функцию, нужно написать её имя и параметры.</FONT></p>
+        <a href="#P"><IMG align="left" src=“4.svg” alt="Previous" title="Previous" border="0" height="50px"
+            width="50px"></a>
+        <a href="#C"><IMG align="center" src=“6.svg” alt="Home" title="Home" border="0" height="50px"
+            width="50px"></a>
+        <a href="#"><IMG align="right" src=“5.svg” alt="Next" title="Next" border="0" height="50px"
+            width="50px"></a>        
+</body>
+</html>
