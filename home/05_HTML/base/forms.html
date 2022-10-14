@@ -14,7 +14,8 @@
         </tr>
         <tr>
             <td>
-                <form action=http://fe.it-academy.by/TestForm.php method="post"><fieldset>
+                <form action=http://fe.it-academy.by/TestForm.php method="post">
+                    <fieldset>
                     <legend>Строка поиска</legend>
                     <input type="text" name="name" maxlength="10">
                     <input type="submit" value="Искать">
@@ -23,10 +24,12 @@
                     <label><input type="radio" name="поиск" id="в google">в google</label>
                     <br>
                     <em>Длина запроса не более 10 символов</em>
+                    </fieldset>
                 </form>
             </td>
             <td>
-                <form action=http://fe.it-academy.by/TestForm.php method="post"><fieldset>
+                <form action=http://fe.it-academy.by/TestForm.php method="post">
+                    <fieldset>
                     <legend>Строка поиска</legend>
                     <input type="text" name="name" placeholder="это обязательное поле" required autofocus>&ast;
                     <input type="submit" value="Искать">
@@ -36,6 +39,7 @@
                     <br>
                     <em>* - обязательное поле<br>
                         Автофокус в поле поиска</em>
+                    </fieldset>
                 </form>
             </td>
         </tr>
@@ -45,26 +49,30 @@
         </tr>
         <tr>
             <td>
-                <form action=http://fe.it-academy.by/TestForm.php method="post"><fieldset>
+                <form action=http://fe.it-academy.by/TestForm.php method="post">
+                    <fieldset>
                     <legend>Авторизируйтесь</legend>
                     <input type="text" name="login" placeholder="это обязательное поле" required>&ast; Логин<br>
                     <input type="password" name="password" placeholder="это обязательное поле" required>&ast; Пароль<br>
                     <input type="checkbox" name="check1">
                     <input type="submit" value="Войти"><br>
                     <em>* - обязательное поле</em>
+                    </fieldset>
                 </form>
             </td>
             <td>
-                <form action=http://fe.it-academy.by/TestForm.php method="post"><fieldset>
+                <form action=http://fe.it-academy.by/TestForm.php method="post">
+                    <fieldset>
                     <legend>Как вам?</legend>
                     <label><input type="radio" name="data" id="ничего">ничего</label><br>
                     <label><input type="radio" name="data" id="неплохо">неплохо</label><br>
                     <label><input type="radio" name="data" id="хорошо">хорошо</label><br>
                     <label><input type="radio" name="data" id="супер">супер</label><br>
-                    <input type="text" name="date_voite" value="2013.12.31" hidden>
+                    <input type="hidden" name="date_voite" value="2013.12.31">
                     <input type="submit" value="Отправить"><br>
                     <em>Есть скрытое поле<br>
                         name=date_voite, value="2013.12.31"</em>
+                    </fieldset>
                 </form>
             </td>
         </tr>
@@ -74,7 +82,8 @@
         </tr>
         <tr>
             <td>
-                <form action=http://fe.it-academy.by/TestForm.php method="post"><fieldset>
+                <form action=http://fe.it-academy.by/TestForm.php method="post">
+                    <fieldset>
                     <legend>Оставьте Ваш отзыв</legend>
                     <input type="text" name="text" placeholder="это обязательное поле" required>&ast; Имя<br>
                     <input type="email" name="email" placeholder="это обязательное поле" required>&ast; e-mail<br>
@@ -83,19 +92,27 @@
                     <em>* - обязательное поле<br>
                         поле email - с проверкой
                         метод POST</em>
+                    </fieldset>
                 </form>
             </td>
             <td>
-                <form action=http://fe.it-academy.by/TestForm.php method="post"><fieldset>
+                <form action=http://fe.it-academy.by/TestForm.php method="post">
+                    <fieldset>
                     <legend>Города РБ</legend>
-                    <label><input type="radio" name="data" id="ничего">ничего</label><br>
-                    <label><input type="radio" name="data" id="неплохо">неплохо</label><br>
-                    <label><input type="radio" name="data" id="хорошо">хорошо</label><br>
-                    <label><input type="radio" name="data" id="супер">супер</label><br>
-                    <input type="text" name="date_voite" value="2013.12.31" hidden>
-                    <input type="submit" value="Отправить"><br>
-                    <em>Есть скрытое поле<br>
-                        name=date_voite, value="2013.12.31"</em>
+                    <select name="list" id="list">
+                        <optgroup label="Города РБ">
+                              <option value="1">Брест</option>
+                              <option value="2">Минск</option>
+                              <option value="3">Витебск</option>
+                        </optgroup>
+                        <optgroup label="Города России">
+                              <option value="4">Москва</option>
+                              <option value="5">Рязань</option>
+                              <option value="6">Магадан</option>
+                        </optgroup>
+                    </select>
+                    <input type="submit" value="Ok">
+                    </fieldset>    
                 </form>
             </td>
         </tr>
@@ -105,26 +122,31 @@
         </tr>
         <tr>
             <td>
-                <form action=http://fe.it-academy.by/TestForm.php method="post"><fieldset>
+                <form action=http://fe.it-academy.by/TestForm.php method="post" enctype="multipart/form-data">
+                    <fieldset>
                     <legend>Upload</legend>
-                    <input type="text" name="login" placeholder="это обязательное поле" required>&ast; Логин<br>
-                    <input type="password" name="password" placeholder="это обязательное поле" required>&ast; Пароль<br>
-                    <input type="checkbox" name="check1">
-                    <input type="submit" value="Войти"><br>
-                    <em>* - обязательное поле</em>
+                    Файл:<br>
+                    <input type="text" name="file" placeholder="Choose File">No file chosen<br>
+                    Срок хранения (года):<br>
+                    <input type="datetime" name="years" ><br>
+                    <input type="submit" value="Загрузить"><br>
+                    <em>Метод POST<br>
+                        В теге form используйте атрибут<br>
+                        enctype="multipart/form-data" для отправки<br>
+                        файла на сервер</em>
+                    </fieldset>
                 </form>
             </td>
             <td>
-                <form action=http://fe.it-academy.by/TestForm.php method="post"><fieldset>
+                <form action=http://fe.it-academy.by/TestForm.php method="post">
+                    <fieldset>
                     <legend>Строка поиска</legend>
-                    <label><input type="radio" name="data" id="ничего">ничего</label><br>
-                    <label><input type="radio" name="data" id="неплохо">неплохо</label><br>
-                    <label><input type="radio" name="data" id="хорошо">хорошо</label><br>
-                    <label><input type="radio" name="data" id="супер">супер</label><br>
-                    <input type="text" name="date_voite" value="2013.12.31" hidden>
-                    <input type="submit" value="Отправить"><br>
-                    <em>Есть скрытое поле<br>
-                        name=date_voite, value="2013.12.31"</em>
+                    <input type="text" name="text" pattern="[А-Яа-яЁё]+" placeholder="Только русские буквы"><br>
+                    <em>Телефонный номер в формате<br>
+                        +ХХХ-ХХ-ХХХХХХХ, где Х - любое число</em>
+                    <input type="tel" name="tel" pattern=".*"><br>
+                    <input type="submit" value="Проверить">
+                    </fieldset>
                 </form>
             </td>
         </tr>
