@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>blocks</title>
+    <style>
+        .leftBlock {
+            width: 15em;
+            height: 15em;
+            background-color:darkgray;
+            color:black;
+            float:left;
+        }
+        .rightBlock_1 {
+            width: auto;
+            background-color: gray;
+            color:black;
+            margin-bottom: .2em;
+            margin-left: 15em;
+        }
+        .rightBlock_2 {
+            width: auto;
+            background-color: gray;
+            color:black;
+            margin-bottom: .2em;
+            margin-left: 15em;
+        }       
+        .footerBlock {
+            width: auto;
+            height: auto;
+            background-color: darkgrey;
+            color: black;
+            clear: both;
+        }
+        #image {
+            width:30px;
+            height: 30px;
+            background-color: gray;
+            float: right;  
+        }
+    </style>
+</head>
+<body>
+    <div class="leftBlock">
+        <h3>Блок навигации</h3>
+        <ul type="disk">
+            <li>Ширина 15em</li>
+            <li>Должен присутствовать цвет фона</li>
+            <li>Располагается слева</li>
+            <li>Блок навигации наполните контентом
+                достаточным, чтобы по высоте он начинал
+                захватывать вторую статью, как показано
+                в данном примере</li>
+        </ul>
+        <br>
+    </div>
+    <div class="rightBlock_1">
+        <h3>Статья 1</h3>
+        <p>Размер блока:<br>
+           Занимает всю доступную ширину<br>
+           Должен присутствовать цвет фона<br>
+           Во всех "статьях" сделайте отступ снизу от соседей равным .2em,
+           при помощи свойста margin-bottom</p>
+        <br>
+    </div>
+    <div class="rightBlock_2">
+        <h3>Статья 2</h3>
+        <p>Размер блока:<br>
+           Занимает всю доступную ширину<br>
+           Должен присутствовать цвет фона<br>
+           Во всех "статьях" сделайте отступ снизу от соседей равным .2em,
+           при помощи свойста margin-bottom<br>
+           Картинка вставлена при помощи тега, плавание организовано по правому
+           краю внутри данной статьи для этой картинки.</p>
+           <img id="image" src="mail.png">
+    </div>
+    <div class="footerBlock">
+        Каскадные таблицы стилей (Cascading Style Sheets)
+        предоставляют дополнительные возможности для разметки html-документа
+        и свободу по созданию уникального дизайна для веб-страниц.
+    </div>
+</body>
+</html>
