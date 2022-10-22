@@ -1,2 +1,2 @@
-@import url(screen.css);
-@import url(print.css);
+@import url(screen.css) screen;
+@import url(print.css) print;
