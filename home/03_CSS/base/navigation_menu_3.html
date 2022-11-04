@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>navigation_menu_3</title>
+    <style>
+        ul {
+         width: 150px; /* Ширина меню */
+         list-style: none; /* Для списка убираем маркеры */
+         margin: 0; /* Нет отступов вокруг */
+         padding: 0; /* Убираем поля вокруг текста */
+         font-family: Arial, sans-serif; /* Рубленый шрифт для текста меню */
+         font-size: 10pt; /* Размер названий в пункте меню */
+        }
+        li ul {
+         position: absolute; /* Подменю позиционируются абсолютно */
+         display: none; /* Скрываем подменю */
+         margin-left: 140px; /* Сдвигаем подменю вправо */
+         margin-top: -20px; /* Сдвигаем подменю вверх */
+        }
+        li {
+         display: block; /* Ссылка как блочный элемент */
+         padding: 5px; /* Поля вокруг надписи */
+         text-decoration: none; /* Подчеркивание у ссылок убираем */
+         color: #666; /* Цвет текста */
+         border: 1px solid #ccc;/* Рамка вокруг пунктов меню */
+         background-color: #f0f0f0; /* Цвет фона */
+         border-bottom: none; /* Границу снизу не проводим */
+        }
+        li:hover {
+         color: #ffe; /* Цвет текста активного пункта */
+         background-color: #5488af; /* Цвет фона активного пункта */
+        }
+        li:hover ul { 
+         display: block; /* При выделении пункта курсором мыши отображается подменю */
+        }
+        .brd {
+         border-bottom: 1px solid #ccc; /* Линия снизу */
+        }
+        @media all and (min-width: 1100px){
+        li { background-color: gold; color:black; position: relative; float: left; cursor: pointer }
+        li ul {color: black; background-color: greenyellow; }
+        li:hover ul { display: block; position: absolute; bottom: -60px; z-index: 1 }
+    }
+       </style>
+</head>
+<body>
+    <ul>
+        <li>Понедельник
+            <ul>
+                <li>Завтрак</li> 
+                <li>Обед</li> 
+                <li class="brd">Ужин</li>   
+            </ul>
+        </li>
+        <li>Вторник
+            <ul>
+                <li>Завтрак</li> 
+                <li>Обед</li> 
+                <li class="brd">Ужин</li>   
+            </ul>
+        </li>
+        <li>Среда
+            <ul>
+                <li>Завтрак</li> 
+                <li>Обед</li> 
+                <li class="brd">Ужин</li>   
+            </ul>
+        </li>
+        <li>Четверг
+            <ul>
+                <li>Завтрак</li> 
+                <li>Обед</li> 
+                <li class="brd">Ужин</li>   
+            </ul>
+        </li>
+        <li>Пятница
+            <ul>
+                <li>Завтрак</li> 
+                <li>Обед</li> 
+                <li class="brd">Ужин</li>   
+            </ul>
+        </li>
+        <li>Суббота
+            <ul>
+                <li>Завтрак</li> 
+                <li>Обед</li> 
+                <li class="brd">Ужин</li>   
+            </ul>
+        </li>
+        <li class="brd">Воскресенье
+            <ul>
+                <li>Завтрак</li> 
+                <li>Обед</li> 
+                <li class="brd">Ужин</li>   
+            </ul>
+        </li> 
+    </ul>
+</body>
+</html>
