@@ -12,8 +12,9 @@
         div.MenuLevel2 > div { background-color: cyan; border: solid black 1px; cursor: pointer; }
         div.MenuLevel1 > div:hover div.MenuLevel2 { display: block; position: absolute; left: 150px; top: -10px; z-index: 1 }
     @media all and (min-width: 1100px){
+        div.MenuLevel1 { width: 700px; }
         div.MenuLevel1 > div { background-color: gold; border: solid black 1px; position: relative; float: left; cursor: pointer }
-        div.MenuLevel1 > div:hover div.MenuLevel2 { display: block; position: absolute; bottom: -60px; z-index: 1 }
+        div.MenuLevel1 > div:hover div.MenuLevel2 { display: block; position: static; z-index: 1 }
     }
     </style>
 </head>

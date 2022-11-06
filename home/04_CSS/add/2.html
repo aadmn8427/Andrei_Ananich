@@ -10,6 +10,7 @@
            margin: 20px;
         }
         table {
+           counter-reset: list 65;
            width: 300px;
            height: 300px;
            border-style: solid;
@@ -17,11 +18,12 @@
            border-width: 2px;
         }
         td {
-           counter-reset: list 65;
-           counter-increment: list -1;
-           content: counter(list);
            text-align: center;
            font-size: small;
+        }
+        td::before {
+           counter-increment: list -1;
+           content: counter(list);
         }
         tr:nth-child(odd) td:nth-child(odd) {
 	       background-color: black;
@@ -31,7 +33,6 @@
 	       background-color: black;
            color: white;
         }
-        
     </style>
 </head>
 <body>
