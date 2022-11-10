@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+            type="text/javascript"
+            integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+            crossorigin="anonymous">
+    </script>
+    <style>
+        body {
+            margin: 50px;
+        }
+    </style>
+</head>
+<body>
+        <h1 align="center">Проверка пароля</h1>
+        <forms>
+            <fieldset>
+                <input type="password" name="password" required>&ast; Пароль<br>
+                <input type="password" name="repeat_password" required>&ast; Повторите пароль<br>
+                <input type="submit" value="Отправить"><br>
+            </fieldset>
+        </forms>
+        <script>
+            $(document).ready(function() {
+                $("input[type=password]").val(
+	            function(){
+                var n = $("input[name=repeat_password]").val()
+	            if(n == "7064044") {
+                    $("input[type=password]").css('backgroundColor', 'green')}
+	            else {
+                    $("input[type=password]").css('backgroundColor', 'red')  
+                }
+	    	});
+        });
+        </script>
+</body>
+</html>

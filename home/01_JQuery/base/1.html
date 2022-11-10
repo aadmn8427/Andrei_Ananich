@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+            type="text/javascript"
+            integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+            crossorigin="anonymous">
+    </script>
+    <style>
+        body {
+          margin: 20px;
+        }
+        table {
+          width: auto;
+          border-style: dotted;
+          border-collapse: separate;
+          border-width: 2px;
+        }
+        tr {
+          border-right-width: 0px;
+          border-left-width: 0px;;
+        }
+        th {
+          text-align: center;   
+          color: black;
+          background-color: darkgray;
+        }
+        td {
+          border-style: dotted;
+          border-width: 2px; 
+        }
+        #button {
+          color: white;
+          background-color: blueviolet;
+        }
+        td:first-child { font-weight: bold;}
+        td:nth-child(2) {font-weight: bold;}
+        tr:nth-child(2n+1) { background-color: beige;}
+        tr:nth-last-child(1) {background-color: white; text-align: center; font-weight: normal;}
+        tr:hover {background-color: greenyellow; cursor: pointer}
+    </style>
+</head>
+<body>
+    <table>
+     <tr id="1">
+        <th>ФИО</th>
+        <th>пол</th>
+        <th>должность</th>
+        <th>дата рож.</th>
+        <th>Данные 01</th>
+        <th>Данные 02</th>
+     </tr>
+     <tr id="2">
+        <td>Иванов Иван Иванович</td>
+        <td>М</td>
+        <td>начальник</td>
+        <td>01.01.1960</td>
+        <td>4567</td>
+        <td>3453</td>
+     </tr>
+     <tr id="3">
+        <td>Петрова Илонна Петровна</td>
+        <td>Ж</td>
+        <td>секретарь</td>
+        <td>01.01.1989</td>
+        <td>98795</td>
+        <td>46523</td>
+     </tr>
+     <tr id="4">
+        <td>Сидоров Илья Игоревич</td>
+        <td>М</td>
+        <td>бухгалтер</td>
+        <td>01.01.1979</td>
+        <td>743434</td>
+        <td>987979</td>
+     </tr>
+     <tr id="5">
+         <td>Пупин Фёдор Фёдорович</td>
+         <td>М</td>
+         <td>водитель</td>
+         <td>01.01.1963</td>
+         <td>74323434</td>
+         <td>9232379</td>
+     </tr>
+     <tr id="6">
+        <td>Крупин Сергей Иванович</td>
+        <td>М</td>
+        <td>водитель 2</td>
+        <td>01.01.1983</td>
+        <td>3234534</td>
+        <td>923123379</td>
+     </tr>
+     <tr id="7">
+        <td colspan="6">ДАННЫЕ О СОТРУДНИКАХ</td>
+     </tr>
+    </table>
+    <br>
+    <button id="button">Нет скрытых строк</button>
+    
+    <script>
+        $(document).ready(function() {
+            $("#1").click(function() {
+            $("#1").hide((300), function() {$("#button").text("Показать все строки");});});
+            $("#2").click(function() {
+            $("#2").hide((300), function() {$("#button").text("Показать все строки");});});
+            $("#3").click(function() {
+            $("#3").hide((300), function() {$("#button").text("Показать все строки");});});
+            $("#4").click(function() {
+            $("#4").hide((300), function() {$("#button").text("Показать все строки");});});
+            $("#5").click(function() {
+            $("#5").hide((300), function() {$("#button").text("Показать все строки");});});
+            $("#6").click(function() {
+            $("#6").hide((300), function() {$("#button").text("Показать все строки");});});
+            $("#7").click(function() {
+            $("#7").hide((300), function() {$("#button").text("Показать все строки");});});
+            $("#button").click(function() {
+            $("tr").show((300), function() {$("#button").text("Нет скрытых строк");});});
+        });
+    </script>
+</body>
+</html>
