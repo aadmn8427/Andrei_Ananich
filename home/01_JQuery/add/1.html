@@ -17,26 +17,33 @@
     </style>
 </head>
 <body>
-        <h1 align="center">Проверка пароля</h1>
-        <forms>
-            <fieldset>
-                <input type="password" name="password" required>&ast; Пароль<br>
-                <input type="password" name="repeat_password" required>&ast; Повторите пароль<br>
-                <input type="submit" value="Отправить"><br>
-            </fieldset>
-        </forms>
-        <script>
-            $(document).ready(function() {
-                $("input[type=password]").val(
-	            function(){
-                var n = $("input[name=repeat_password]").val()
-	            if(n == "7064044") {
-                    $("input[type=password]").css('backgroundColor', 'green')}
-	            else {
-                    $("input[type=password]").css('backgroundColor', 'red')  
-                }
-	    	});
+    <h1 align="center">Проверка пароля</h1>
+    <forms>
+        <fieldset>
+            <input type="password" name="password" required>&ast; Пароль<br>
+            <input type="password" name="repeat_password" required>&ast; Повторите пароль<br>
+            <input type="submit" value="Отправить"><br>
+        </fieldset>
+    </forms>
+    <script>
+        $(document).ready(function() {
+            var inp1 = $("[name='password']");
+            var inp2 = $("[name='repeat_password']");
+            $('input[type="password"]').keyup(function(){
+            var val1 = inp1.val();
+            var val2 = inp2.val();
+            console.log('val1', val1);
+            console.log('val2', val2);
+	        if(val1 === val2) {
+                inp1.css('backgroundColor', 'green')
+                inp2.css('backgroundColor', 'green')
+            }
+	        else {
+                inp1.css('backgroundColor', 'red')
+                inp2.css('backgroundColor', 'red')
+            }
+	        });
         });
-        </script>
+    </script>
 </body>
 </html>
